@@ -1,0 +1,14 @@
+<div class="calendar">
+    <div class="header">
+      <button (click)="previousMonth()">Previous</button>
+      <h2>{{ currentMonth }}</h2>
+      <button (click)="nextMonth()">Next</button>
+    </div>
+    <div class="weekdays">
+      <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>
+    </div>
+    <div class="days">
+      <div *ngFor="let day of calendarDays" class="day">{{ day }}</div>
+    </div>
+  </div>
+  
