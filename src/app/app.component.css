@@ -1,32 +1,69 @@
-.calendar {
+*{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+.weekDiv,.header{
   display: flex;
-  flex-direction: column;
+}
+.header{
+  justify-content: center;
+}
+.navigations{
+  margin-left: 155px;
+}
+.navigations span{
+  position: relative;
+  right: 15px;
+margin: 1px 7px;
+cursor: pointer;
+font-size:medium;
+}
+.calender{
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.container{
+height: 300px;
+width:300px;
+  background-color: #fff;
+}
+.weekDiv{
+  margin:5px  0px;
+}
+.weeks{
+margin: 5px;
+padding: 5px;
+text-align: center;
+border-radius: 50px;
+width: 20px;
+color: rgb(108, 108, 108);
 }
 
-.weekdays {
+.month span{
+color: rgb(108, 108, 108);
+
+}
+.weeks:hover{
+  cursor: pointer;
+  background-color: rgb(218,220,224);
+}
+.weekEnd {
+  color: rgb(0, 70, 92); /* Set the desired color for the next month's days */
+}
+.weekContainer{
+display: flex;
+}
+.weekdays{
+color: rgb(64, 62, 62);
+margin: 5px;
+padding: 5px;
+text-align: center;
+border-radius: 50px;
+width: 20px;
+}
+.total {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  margin-bottom: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
 
-.weekday {
-  text-align: center;
-}
-
-.days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.day {
-  text-align: center;
-  padding: 5px;
-  border: 1px solid #ccc;
-}

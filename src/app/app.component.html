@@ -1,14 +1,31 @@
-<div class="calendar">
-    <div class="header">
-      <button (click)="previousMonth()">Previous</button>
-      <h2>{{ currentMonth }}</h2>
-      <button (click)="nextMonth()">Next</button>
+<div class="calender">
+  <div class="container">
+    <div class="month">
+<div class="header">
+  <div>{{ onChangingMonths(currentMonthIndex)}} 2023</div>
+  <div class="navigations">
+    <span class="material-symbols-outlined" (click)="previousMonth()" *ngIf="this.currentMonthIndex>1">
+      <
+      </span>
+    <span class="material-symbols-outlined" (click)="nextMonth()" *ngIf="this.currentMonthIndex<12">
+    >
+      </span>
+  </div>
+</div>
     </div>
-    <div class="weekdays">
-      <div *ngFor="let day of weekdays" class="weekday">{{ day }}</div>
-    </div>
-    <div class="days">
-      <div *ngFor="let day of calendarDays" class="day">{{ day }}</div>
+
+    <div class="dates">
+      <div class="weekContainer">
+        <div class="weekdays" *ngFor="let weekday of weekdays">
+          <strong [class.weekEnd]="weekday=='S'">{{weekday}}</strong>
+        </div>
+      </div>
+      <div class="total">
+      <div *ngFor="let week of monthDays" class="weekDiv">
+<div class="weeks" *ngFor="let day of week"  [class.weekEnd]="isWeekend(day)">
+<div>{{day}}</div>
+</div>
+      </div></div>
     </div>
   </div>
-  
+</div>
