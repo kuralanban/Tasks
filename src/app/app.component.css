@@ -52,7 +52,8 @@ color: rgb(108, 108, 108);
   color: rgb(0, 70, 92); /* Set the desired color for the next month's days */
 }
 .weekContainer{
-display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
 .weekdays{
 color: rgb(64, 62, 62);
